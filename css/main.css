@@ -7,14 +7,14 @@
 h2 {
     font-size: 45px;
     font-weight: 500;
-    color: #fff;
+    color: #000;
     text-align: center;
 }
 
 p {
     font-size: 21px;
     font-weight: 300;
-    color: #fff;
+    color: #000;
     line-height: 1.414;
 }
 
@@ -25,7 +25,6 @@ p {
 }
 
 .t_m {
-    font-size: 21px;
     font-weight: 500;
     color: #fff;
 }
@@ -61,7 +60,7 @@ p {
     gap: 30px;
 }
 
-.header .container ul>li {
+.header .container .left ul>li {
     position: relative;
 }
 
@@ -76,6 +75,7 @@ p {
     text-align: center;
     background: #fff;
     opacity: 0;
+    transition: 0.5s;
 }
 
 .header .container .left ul>li:hover>ul {
@@ -99,24 +99,24 @@ p {
     display: none;
 }
 
-.header .container ul li:hover::after {
+.header .container .left ul li:hover::after {
     width: 100%;
 }
 
-.header .container ul>li>ul>li {
+.header .container .left ul>li>ul>li {
     border-bottom: 1px solid #ddd;
 }
 
-.header .container ul>li>ul>li:hover {
+.header .container .left ul>li>ul>li:hover {
     background: #00ffff;
     color: #aa0000;
 }
 
-.header .container ul>li>ul>li:nth-child(1) {
+.header .container .left ul>li>ul>li:nth-child(1) {
     border-top: 1px solid #ddd;
 }
 
-.header .container ul>li>ul>li:nth-last-child(1) {
+.header .container .left ul>li>ul>li:nth-last-child(1) {
     border-bottom: none;
 }
 
@@ -124,12 +124,17 @@ p {
     width: 50px;
 }
 
+.header .container .right {
+    margin: 0 0 0 227.08px;
+    font-size: 35px;
+}
+
 .main_visual_video video {
     position: relative;
     width: 100%;
 }
 
-section .wheel {
+.wheel_icon .wheel {
     position: absolute;
     bottom: 10px;
     left: 50%;
@@ -140,7 +145,7 @@ section .wheel {
     border-radius: 20px;
 }
 
-section .wheel span {
+.wheel_icon .wheel span {
     font-size: 0;
     position: absolute;
     top: 2px;
@@ -150,6 +155,28 @@ section .wheel span {
     background: #fff;
     border-radius: 2px;
     animation: wheel 0.5s infinite;
+}
+
+.introduce {
+    padding: 50px 0;
+}
+
+.introduce .container figure {
+    width: 70%;
+}
+
+.introduce .container figure img {
+    border-radius: 20px;
+}
+
+.introduce .container .inner {
+    width: 30%;
+    display: block;
+    text-align: center;
+}
+
+.introduce .container .inner h2 {
+    font-size: 35px;
 }
 
 .item {
@@ -177,6 +204,7 @@ section .wheel span {
     top: 20%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: #fff;
 }
 
 .beer_inner p {
@@ -184,6 +212,7 @@ section .wheel span {
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: #fff;
 }
 
 .beer_inner img {
@@ -192,6 +221,45 @@ section .wheel span {
     top: 60%;
     left: 30%;
     transform: translate(-50%, -50%);
+}
+
+.footer {
+    background: #000;
+    color: #fff;
+}
+
+.footer .container {
+    display: block;
+}
+
+.footer .container .content {
+    display: flex;
+    justify-content: space-between;
+    line-height: 100px;
+}
+
+.footer .container .content ul {
+    display: flex;
+    gap: 30px;
+}
+
+.footer .container .content .sns i {
+    font-size: 25px;
+    padding: 5px;
+    background: #00ffff;
+    color: #000;
+    border-radius: 50%;
+}
+
+.toTop i {
+    position: fixed;
+    top: 90%;
+    left: 90%;
+    padding: 10px;
+    background: #ddd;
+    font-size: 25px;
+    border-radius: 20px;
+    cursor: pointer;
 }
 
 @keyframes wheel {
