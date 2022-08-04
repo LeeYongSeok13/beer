@@ -5,10 +5,6 @@ $(function () {
         $('html,body').animate({ scrollTop: hash }, 3000)
     });
 
-    $('.beer_slider').slick({
-        arrows: false,
-    });
-
     $('.toTop').on('click', function () {
         $('html,body').animate({ scrollTop: 0 }, 200);
     });
@@ -20,5 +16,16 @@ $(function () {
         } else {
             $('.toTop').fadeOut(1000);
         }
-    })
+    });
+
+    $('.beer_slider').on('afterChange', function () {
+        var current = $('.slick-current');
+        current.addClass('on').siblings().removeClass('on');
+    });
+
+    $('.beer_slider').slick({
+        arrows: false,
+        autoplay: true,
+    });
+
 })

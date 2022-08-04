@@ -5,34 +5,35 @@
 }
 
 h2 {
-    font-size: 45px;
+    font-size: 35px;
     font-weight: 500;
-    color: #000;
+    color: #fff;
     text-align: center;
+    line-height: 1.414;
+    margin: 10px 0 30px 0;
 }
 
 p {
-    font-size: 21px;
+    font-size: 25px;
     font-weight: 300;
-    color: #000;
+    color: #fff;
     line-height: 1.414;
+    text-align: center;
+    text-shadow: 1px 1px 3px #000;
 }
 
 .t_b {
     font-size: 55px;
     font-weight: 700;
-    color: #fff;
 }
 
 .t_m {
     font-weight: 500;
-    color: #fff;
 }
 
 .t_s {
     font-size: 25px;
     font-weight: 300;
-    color: #fff;
 }
 
 .header {
@@ -177,6 +178,8 @@ p {
 
 .introduce .container .inner h2 {
     font-size: 35px;
+    font-weight: 500;
+    color: #000;
 }
 
 .item {
@@ -192,36 +195,69 @@ p {
 }
 
 .beer_banner {
-    margin: 50px 0;
+    position: relative;
+    padding: 50px 0;
 }
 
 .beer_banner .beer_slider figure {
     position: relative;
+    height: 400px;
 }
 
-.beer_inner h2 {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
+.beer_banner .beer_slider .beer01 {
+    background: url('../img/banner01.png')no-repeat center center/cover;
 }
 
-.beer_inner p {
-    position: absolute;
-    top: 60%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #fff;
+.beer_banner .beer_slider .beer02 {
+    background: url('../img/banner02.png')no-repeat center center/cover;
 }
 
-.beer_inner img {
+.beer_banner .beer_slider .beer03 {
+    background: url('../img/banner03.png')no-repeat center center/cover;
+}
+
+.beer_banner .beer_slider .beer04 {
+    background: url('../img/banner04.png')no-repeat center center/cover;
+}
+
+.beer_banner .beer_slider figure img {
     position: absolute;
     width: 10%;
     top: 60%;
-    left: 30%;
+    left: 15%;
     transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: 0.5s
 }
+
+.beer_banner .beer_slider figure.on img {
+    left: 25%;
+    opacity: 1;
+}
+
+.beer_banner .beer_slider figure h2 {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s 0.5s;
+}
+
+.beer_banner .beer_slider figure.on h2 {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.beer_banner .beer_slider figure p {
+    transform: translateY(100px);
+    opacity: 0;
+    transition: 0.5s 1s;
+}
+
+
+.beer_banner .beer_slider figure.on p {
+    transform: translateY(0);
+    opacity: 1;
+}
+
 
 .footer {
     background: #000;
@@ -249,6 +285,12 @@ p {
     background: #00ffff;
     color: #000;
     border-radius: 50%;
+}
+
+.footer .container .information p {
+    font-size: 15px;
+    font-weight: 300;
+    text-align: left;
 }
 
 .toTop i {
