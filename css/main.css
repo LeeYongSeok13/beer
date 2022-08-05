@@ -159,6 +159,16 @@ p {
     animation: wheel 0.5s infinite;
 }
 
+.event {
+    padding: 50px 0;
+}
+
+.event .event_img {
+    height: 400px;
+    background: url('../img/event.png')no-repeat center center/cover;
+}
+
+
 .fixed {
     padding: 50px 0;
 }
@@ -379,7 +389,6 @@ p {
     transform: translateY(0);
     opacity: 1;
 }
-
 
 .footer {
     background: #000;
