@@ -19,7 +19,6 @@ p {
     color: #fff;
     line-height: 1.414;
     text-align: center;
-    text-shadow: 1px 1px 3px #000;
 }
 
 .t_b {
@@ -34,6 +33,10 @@ p {
 .t_s {
     font-size: 25px;
     font-weight: 300;
+}
+
+.t_mint {
+    color: #00ffff;
 }
 
 .header {
@@ -105,6 +108,8 @@ p {
 }
 
 .header .container .left ul>li>ul>li {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
 }
 
@@ -115,10 +120,6 @@ p {
 
 .header .container .left ul>li>ul>li:nth-child(1) {
     border-top: 1px solid #ddd;
-}
-
-.header .container .left ul>li>ul>li:nth-last-child(1) {
-    border-bottom: none;
 }
 
 .header .container img {
@@ -158,27 +159,76 @@ p {
     animation: wheel 0.5s infinite;
 }
 
+.fixed {
+    padding: 50px 0;
+}
+
+.fixed .fixed_img {
+    position: relative;
+    background: url('../img/fixed.png')no-repeat fixed center center/cover;
+    height: 300px;
+}
+
+.fixed .fixed_img .fixed_inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fixed .fixed_img .fixed_inner h2 {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.fixed .fixed_img .fixed_inner p {
+    font-size: 25px;
+    font-weight: 500;
+    margin: 0 0 20px 0;
+}
+
 .introduce {
     padding: 50px 0;
 }
 
 .introduce .container figure {
-    width: 70%;
+    float: left;
+    width: 50%;
 }
+
 
 .introduce .container figure img {
     border-radius: 20px;
 }
 
 .introduce .container .inner {
-    width: 30%;
-    display: block;
+    float: left;
+    width: 50%;
     text-align: center;
 }
 
 .introduce .container .inner h2 {
+    position: relative;
     font-size: 35px;
     font-weight: 500;
+    color: #00ffff;
+}
+
+.introduce .container .inner h2::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 80%;
+    height: 3px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #00ffff;
+}
+
+.introduce .container .inner p {
+    font-size: 17px;
+    font-weight: 300;
     color: #000;
 }
 
@@ -186,12 +236,84 @@ p {
     margin: 100px 0;
 }
 
-.item .container {
-    gap: 30px;
+.item .container .explain {
+    float: left;
+    width: 50%;
+    text-align: center;
 }
 
-.item .container figure img {
+.item .container .explain h2 {
+    position: relative;
+    font-size: 35px;
+    font-weight: 500;
+    color: #00ffff;
+}
+
+.item .container .explain h2::after {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 80%;
+    height: 3px;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #00ffff;
+}
+
+.item .container .explain p {
+    font-size: 17px;
+    color: #000;
+}
+
+.item .container .product {
+    float: left;
+    width: 50%;
+}
+
+.item .container .product .product_slider figure {
+    position: relative;
+    height: 600px;
     border-radius: 20px;
+}
+
+.item .container .product .product_slider .product01 {
+    background: url('../img/item01.jpg')no-repeat center center/cover;
+}
+
+.item .container .product .product_slider .product02 {
+    background: url('../img/item02.jpg')no-repeat center center/cover;
+}
+
+.item .container .product .product_slider .product03 {
+    background: url('../img/item03.jpg')no-repeat center center/cover;
+}
+
+.item .container .product .product_slider figure .product_inner {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.item .container .product .product_slider figure .product_inner h2 {
+    font-size: 27px;
+    font-weight: 500;
+    text-align: left;
+}
+
+.item .container .product .product_slider figure .product_inner p {
+    font-size: 21px;
+    font-weight: 300;
+    text-align: left;
+}
+
+.item .container .product .product_slider figure .product_inner del {
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.item .container .product .product_slider img {
+    width: 100%;
 }
 
 .beer_banner {

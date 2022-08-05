@@ -18,7 +18,12 @@ $(function () {
         }
     });
 
-    $('.beer_slider').on('afterChange', function () {
+    $('.product_slider').slick({
+        arrows: false,
+        autoplay: true,
+    });
+
+    $('.beer_slider').on('init afterChange', function () {
         var current = $('.slick-current');
         current.addClass('on').siblings().removeClass('on');
     });
